@@ -3,6 +3,8 @@ import { Row,Col } from 'antd'
 import Headers from './components/Header'
 import Footers from './components/Footer'
 import NavLeft from './components/NavLeft'
+import Home from './pages/Home/index.js'
+import ScrollView from 'react-custom-scrollbars'
 
 import './style/common.less'
 
@@ -14,9 +16,15 @@ export default class Admin extends React.Component{
                 <Col span={4} className="nav-left">
                     <NavLeft/>
                 </Col>
-                <Col span={20}>
+                <Col span={20} className="cont-main">
                     <Headers/>
-                    <Row>content</Row>
+                    <Row className="cont-content">
+                        <div className="content-scroll"> 
+                            <ScrollView>
+                                <Home/>
+                            </ScrollView>
+                        </div>
+                    </Row>
                     <Footers/>
                 </Col>
             </Row>
