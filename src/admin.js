@@ -5,6 +5,7 @@ import Footers from './components/Footer'
 import NavLeft from './components/NavLeft'
 import Home from './pages/Home/index.js'
 import ScrollView from 'react-custom-scrollbars'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import './style/common.less'
 
