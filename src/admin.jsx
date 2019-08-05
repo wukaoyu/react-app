@@ -3,9 +3,7 @@ import { Row,Col } from 'antd'
 import Headers from './components/Header'
 import Footers from './components/Footer'
 import NavLeft from './components/NavLeft'
-import Home from './pages/Home/index.jsx'
 import ScrollView from 'react-custom-scrollbars'
-import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import './style/common.less'
 
@@ -22,7 +20,7 @@ export default class Admin extends React.Component{
                     <Row className="cont-content">
                         <div className="content-scroll"> 
                             <ScrollView>
-                                <Home/>
+                                {this.props.children}
                             </ScrollView>
                         </div>
                     </Row>
