@@ -4,6 +4,19 @@ import { Button, Card } from 'antd'
 import './index.less'
 
 export default class Buttons extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loagdingFlag: true
+        }
+    }
+
+    handIsLoading = () => {
+        this.setState({
+            loagdingFlag: !this.state.loagdingFlag
+        })
+    }
+
     render() {
         return (
             <div className="card-box">
@@ -24,12 +37,10 @@ export default class Buttons extends React.Component {
                     <Button icon="download" type="primary">下载 </Button>
                 </Card>
                 <Card title="Loading按钮">
-                    <Button type="primary" loading={true}>确定</Button>
-                    <Button icon="edit">编辑</Button>
-                    <Button icon="delete">删除</Button>
-                    <Button icon="search" shape='circle'></Button>
-                    <Button icon="search" type="primary">搜索</Button>
-                    <Button icon="download" type="primary">下载 </Button>
+                    <Button type="primary" loading={this.state.loagdingFlag}>确定</Button>
+                    <Button type="primary" shape='circle' loading={this.state.loagdingFlag}></Button>
+                    <Button loading={this.state.loagdingFlag}>点击加载</Button>
+                    <Button type="primary" onClick={this.handIsLoading}>加载 </Button>
                 </Card>
             </div>
         )

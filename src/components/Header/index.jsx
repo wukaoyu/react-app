@@ -6,7 +6,6 @@ import Util from '../../util/util'
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-        const _this = this;
         // 不要在这里调用 this.setState()
         this.state = { username: "随心。"};
         setInterval(() => {
@@ -15,8 +14,6 @@ export default class Header extends React.Component {
                 time:sysTime
             })
         },1000)
-    }
-    UNSAFE_componentWillMount() {
     }
     render() {
         return(
