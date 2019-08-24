@@ -4,9 +4,9 @@ import App from './App'
 import Admin from './admin'
 import Login from './pages/Login/login'
 import Button from './pages/ui/button'
+import Modals from './pages/ui/modals'
 import Home from './pages/Home'
 import NoMatch from './pages/noMatch'
-
 export default class Router extends React.Component {
     render() {
         return (
@@ -18,6 +18,7 @@ export default class Router extends React.Component {
                                 <Switch>
                                     <Route path='/admin/home' component={Home}></Route>
                                     <Route path='/admin/ui/buttons' component={Button}></Route>
+                                    <Route path='/admin/ui/modals' component={Modals}></Route>
                                     <Route component={NoMatch}/>
                                 </Switch>
                             </Admin>
